@@ -35,7 +35,7 @@ int main() {
 
         // we need to draw a SHAPE to fill with the TEXTURE (image)
         Rectangle source = { 0, 0, (float)photo.width, (float)photo.height };
-        Rectangle dest   = { 0, 0, 1000, 800 };
+        Rectangle dest   = { 0, 0, 200, 100 };
 
         DrawTexturePro(photo, source, dest, {0, 0}, 0.0f, WHITE);
         // parameters: texture, shape, destination, origin, rotation, color tint

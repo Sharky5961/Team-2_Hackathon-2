@@ -1,4 +1,8 @@
 # 🌅 hackathon 2
+## Documentation of Planning
+
+https://drive.google.com/drive/folders/1BW7Htiy5-RLbMzn9N8XtUixThiqS4ea9?usp=drive_link
+
 ## project structure
 
 This repository of code gives the file structure you need in order to code with `raylib` and use Github Codespaces for this hackathon.

@@ -3,6 +3,17 @@
 
 https://drive.google.com/drive/folders/1BW7Htiy5-RLbMzn9N8XtUixThiqS4ea9?usp=drive_link
 
+## Edits:
+
+### CMakeLists.txt:
+```
+FetchContent_Declare(raylib
+  URL https://github.com/raysan5/raylib/archive/refs/tags/6.2.tar.gz)
+```
+> 6.2.tar.gz was written instead of what was on original repo to match most current version
+`set(CMAKE_EXPORT_COMPILE_COMMANDS ON)`
+> Added because of small compiling errors on my windows device (suggestion by claude.ai)
+
 ## project structure
 
 This repository of code gives the file structure you need in order to code with `raylib` and use Github Codespaces for this hackathon.

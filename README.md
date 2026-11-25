@@ -18,7 +18,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # EXTRA NOTES
 If doesn't work, (wasn't working because of .jpg convert, so force it)
-- For Windows
+- For Windows (was tested on Zed)
 ```
 Remove-Item -Recurse -Force build
 cmake -S . -B build -G "MinGW Makefiles" -DCUSTOMIZE_BUILD=ON -DSUPPORT_FILEFORMAT_JPG=ON

@@ -388,6 +388,11 @@ int main() {
                             DrawRectangleRec(individual_static, PURPLE);
                         }
 
+                        if (frames_counter_minigame > fps*10)
+                        {
+                            mutation = true;
+                        }
+
                         if (frames_counter_minigame > fps*11)
                         {
                             mutation = true;

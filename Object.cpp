@@ -12,6 +12,11 @@ Object::Object(const char *filePath, float x, float y, int width, int height) {
     this->image = LoadTextureFromImage(image); // ex. "items\apple.jpg"
     UnloadImage(image);
 
+    // forgot to add this in the original version, but now will close w/ any image errors
+    if (this->image.id == 0) { 
+        CloseWindow();
+    }
+
     this->x = x; // set x-pos
     this->y = y; // set y-pos
     this->width = width;

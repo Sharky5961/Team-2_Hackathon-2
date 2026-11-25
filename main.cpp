@@ -11,8 +11,8 @@
 #include "raylib.h"
 #include "Objects.h"
 
-#include <cctype>
 #include <iostream>
+#include <cctype>
 #include <vector>
 #include <string>
 
@@ -36,6 +36,33 @@ std::string floatToString(float number, int digits = 3) {
 }
 
 int main() {
+
+    /*
+        Cleaning up for future Linux/Mac/Windows issues early
+        by using user prompting
+    */
+
+    std::string opSys;
+
+    std::cout << "What is your OS?" << std::endl;
+    std::cin >> opSys;
+  
+    std::string temp = "";
+    for (int i = 0; i < opSys.size(); i++) {
+        temp += tolower(opSys[i]); // type matching
+    }
+    opSys = temp;
+
+    std::string url = "";
+    if (opSys.find("win") < opSys.size()) {
+        url = "\\";
+    }
+    else {
+        url = "/";
+    }
+
+// START ACTUAL PROGRAM
+
     const int xPixels = 900, yPixels = 800;
 
     /* raylib graphics + games library: open a window, size 1000x800 pixels */
@@ -46,13 +73,14 @@ int main() {
     Color textColor = BLACK;
     std::string message;
 
-    Object knapsack("items\\knapsack.jpg", xPixels/2.f + 50, yPixels/2.f, xPixels/2, yPixels/2);
+    std::string filePath = "items" + url + "knapsack.jpg"; 
+    Object knapsack(filePath.c_str(), xPixels/2.f + 50, yPixels/2.f, xPixels/2, yPixels/2);
 
     std::vector<std::string> filePaths =
-        {"items\\apple.jpg",
-         "items\\banana.png",
-         "items\\peach.jpg",
-         "items\\water.jpg"};
+        {"items" + url + "apple.jpg",
+         "items" + url + "banana.png",
+         "items" + url + "peach.jpg",
+         "items" + url + "water.jpg"};
 
     // using numbers provided by https://arpitbhayani.me/blogs/genetic-knapsack/ because I'm unoriginal :P
     std::vector<float> weight = { 1, 2, 4, 7 };

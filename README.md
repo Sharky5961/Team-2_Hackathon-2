@@ -53,11 +53,20 @@ Codespaces is a free IDE on Github, but you only get 60 hours per month on the f
 
 # EXTRA NOTES
 If doesn't work, (wasn't working because of .jpg convert, so force it)
+- For Windows
 ```
 Remove-Item -Recurse -Force build
 cmake -S . -B build -G "MinGW Makefiles" -DCUSTOMIZE_BUILD=ON -DSUPPORT_FILEFORMAT_JPG=ON
 cmake --build build
 ```
+- For Linux
+```
+rm -rf build
+cmake -S . -B build -DCUSTOMIZE_BUILD=ON -DSUPPORT_FILEFORMAT_JPG=ON
+cmake --build build
+```
+Found solution via claude.ai when getting compilation time errors (major issue started w/ being unable to recognize the image type). The windows solution was later copy-and-pasted back into Claude.ai to find the solution for the Linux Distro which was also giving the same error.
+
 Dependencies needed are raylib, and cmake library
 ```https://www.raylib.com/```
 ```https://cmake.org/download/```

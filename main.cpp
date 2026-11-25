@@ -1,7 +1,7 @@
 /*
  *  Note on writing convention:
  *
- *  I got lazy (Frank) and never added using namespace std,
+ *  I got lazy (-------) and never added using namespace std,
  *  so most of it is just me writing using std::f_n when necessary.
  *
  *  C:

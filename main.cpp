@@ -160,7 +160,7 @@ int main() {
 
                     if (frames_counter_intro > fps*4)
                     {
-                        string intro_text_3 = "Did you know?\n\nAmazon uses genetic algorithms to optimize their delivery routes.\nThey determine the most efficient path for delivery drivers by taking\ninto account variables such as number of delivery stops, the distance\nbetween these stops, traffic, etc.";
+                        string intro_text_3 = "Did you know?\n\nAmazon uses genetic algorithms to optimize their delivery routes.\n\nThey determine the most efficient path for delivery drivers by taking\ninto account variables such as number of delivery stops, the distance\nbetween these stops, traffic, etc.";
                         // more info about Amazon's genetic algorithms can be found below:
                         // https://aws.amazon.com/blogs/machine-learning/using-genetic-algorithms-on-aws-for-optimization-problems/
                         // https://github.com/aws-samples/genetic-algorithm-on-aws
@@ -168,7 +168,7 @@ int main() {
                         DrawText(
                             intro_text_3.c_str(),
                             20,
-                            screenHeight / 10.0f * 4,
+                            screenHeight / 10.0f * 5,
                             intro_text_3_font_size,
                             DARKBLUE
                         );
@@ -207,9 +207,9 @@ int main() {
                         BLACK
                     );
 
-                    if (frames_counter_minigame_intro > fps)
+                    if (frames_counter_minigame_intro > fps*2)
                     {
-                        string minigame_intro_text_2 = "Let's try figuring this out playing a simple minigame!";
+                        string minigame_intro_text_2 = "Let's try figuring this out by playing a simple minigame!";
                         int minigame_intro_text_2_font_size = 25;
                         DrawText(
                             minigame_intro_text_2.c_str(),
@@ -355,7 +355,7 @@ int main() {
                             BLACK
                         );
 
-                        if (frames_counter_minigame > fps*2)
+                        if (frames_counter_minigame > fps*3)
                         {
                             string minigame_text_2 = "You can think of this sequence as a small POPULATION.\nThere are currently only 2 possibile variations in the population,\norange and blue.";
                             int minigame_text_2_font_size = 20;
@@ -367,7 +367,7 @@ int main() {
                                 BLACK
                             );
                         }
-                        if (frames_counter_minigame > fps*5)
+                        if (frames_counter_minigame > fps*6)
                         {
                             string minigame_text_3 = "We can introduce more DIVERSITY in our population by adding\nnew variations.";
                             int minigame_text_3_font_size = 20;
@@ -380,7 +380,7 @@ int main() {
                             );
                         }
 
-                        if (frames_counter_minigame > fps*7)
+                        if (frames_counter_minigame > fps*8)
                         {
                             individual_static.y = 100 + (0 * 60);
                             DrawRectangleRec(individual_static, GREEN);
@@ -388,7 +388,7 @@ int main() {
                             DrawRectangleRec(individual_static, PURPLE);
                         }
 
-                        if (frames_counter_minigame > fps*10)
+                        if (frames_counter_minigame > fps*11)
                         {
                             mutation = true;
                             string minigame_text_4 = "Hmm, it looks like the last individual randomly MUTATED.\n This also introduces more diversity.";
@@ -396,13 +396,13 @@ int main() {
                             DrawText(
                                 minigame_text_4.c_str(),
                                 120,
-                                340,
+                                350,
                                 minigame_text_4_font_size,
                                 BLACK
                             );
                         }
 
-                        if (frames_counter_minigame > fps*11)
+                        if (frames_counter_minigame > fps*12)
                         {
                             string minigame_text_5 = "PRESS ENTER TO CONTINUE";
                             int minigame_text_5_font_size = 15;
